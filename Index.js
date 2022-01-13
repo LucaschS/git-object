@@ -17,4 +17,16 @@ const person = {
     }
 };
 
-document.getElementById("root").innerHTML = person.fullName();
+const person2 = {
+    firstName: "Zdzichu",
+    lastName: "Wiesiek",
+    id: 5566,
+    fullName: function () {
+        return this.firstName + '  ' + this.lastName;
+    }
+};
+
+const cars = ['saab', 'volvo', 'bmw'];
+cars[0] = 'dupa';
+
+document.getElementById("root").innerHTML = person.fullName() + ' ' + person2.fullName() + cars;
