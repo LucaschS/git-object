@@ -70,3 +70,6 @@ $numArray = array_merge(array_splice($numArray, -1), $numArray);
 /** Change $array to two dimensional array with $strArray. Expected: $array = [0 => [0 => "one", 1 => "two", 2 => "three", 3 => "four"]]  **/
 
 $array = [$strArray];
+
+
+/** Przykładowy komentarz **/
