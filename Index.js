@@ -35,12 +35,19 @@ document.getElementById("root").innerHTML = person.fullName() + ' ' + person2.fu
 // ARRAY
 const cars = ['saab', 'volvo', 'bmw'];
 
-let text = "<ul>"
+cars.forEach(myFunction);
+function myFunction(chuj, dupa, cipa) {
+    console.log(chuj + " " + dupa + ' ' + cipa);
+}
+
+
+/* let text = "<ul>"
 cars.forEach(myFunction);
 text += "</ul>";
 
 function myFunction(value) {
     text += "<li>" + value + "</li>"
-}
-
-document.getElementById("root").innerHTML = text;
+} */
+// SYNtAX
+// array.forEach(function(currentValue, index, arr), thisValue)
+// document.getElementById("root").innerHTML = text;
