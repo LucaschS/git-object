@@ -34,6 +34,11 @@ document.getElementById("root").innerHTML = person.fullName() + ' ' + person2.fu
 
 // ARRAY
 const cars = ['saab', 'volvo', 'bmw'];
+let flen = cars.length;
+let text = "<ul>";
+for (let x = 0; x < flen; x++) {
+    text += "<li>" + cars[x] + "</li>"
+}
+text += '</ul>';
 
-cars[0] = 'dupa';
-console.log(cars[cars.length - 1]);
+document.getElementById("root").innerHTML = text;
