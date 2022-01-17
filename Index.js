@@ -34,11 +34,13 @@ document.getElementById("root").innerHTML = person.fullName() + ' ' + person2.fu
 
 // ARRAY
 const cars = ['saab', 'volvo', 'bmw'];
-let flen = cars.length;
-let text = "<ul>";
-for (let x = 0; x < flen; x++) {
-    text += "<li>" + cars[x] + "</li>"
+
+let text = "<ul>"
+cars.forEach(myFunction);
+text += "</ul>";
+
+function myFunction(value) {
+    text += "<li>" + value + "</li>"
 }
-text += '</ul>';
 
 document.getElementById("root").innerHTML = text;
