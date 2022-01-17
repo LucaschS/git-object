@@ -1,3 +1,4 @@
+//FUNCTION
 function fn(a, b, c) {
     return a + b + c
 }
@@ -8,6 +9,8 @@ var z = fn(2, 3, 4);
 var c = fn(1, 2, 3);
 console.log(x + y + z + c);
 
+
+//OBJECT
 const person = {
     firstName: "Zdzichu",
     lastName: "Wiesiek",
@@ -26,7 +29,11 @@ const person2 = {
     }
 };
 
-const cars = ['saab', 'volvo', 'bmw'];
-cars[0] = 'dupa';
-
 document.getElementById("root").innerHTML = person.fullName() + ' ' + person2.fullName() + cars;
+
+
+// ARRAY
+const cars = ['saab', 'volvo', 'bmw'];
+
+cars[0] = 'dupa';
+console.log(cars[cars.length - 1]);
