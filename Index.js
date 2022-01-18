@@ -50,23 +50,79 @@ for (let i = 0; i < cars.length; i++) {
 
 // arrow function inside forEach
 
-cars.forEach((chuj, dupa, cipa) => console.log(chuj, dupa, cipa));
+cars.forEach((item, index, arr) => console.log(item, index, arr));
+
+cars.forEach(function (item) {
+    document.write(item + '<br>')
+})
 
 
+// testujemy nowa funkcję
+const numbers = [1, 2, 3, 4]
+numbers.forEach(myFunction2)
+function myFunction2(item, index, arr) {
+    console.log(arr[index] = item * 100);
+}
 
+console.log("-----------testowanie funkcji modyfikujących tablice---------------")
+
+// pop usuwa ostatni element z tablicy
+
+numbers.pop();
+console.log(numbers);
+
+// push wstawia wskazany element na ostatnim indexie
+numbers.push(1000);
+console.log(numbers);
+
+// shift usuwa pierwszy element, a resztę elementów przesuwa o jeden index do tyłu
+
+numbers.shift();
+console.log(numbers);
+
+// unshift wstawia element do pierwszego indexu
+
+numbers.unshift(1);
+console.log(numbers);
+
+// concat łączy tablice w jedną
+const tab1 = [1, 2, 3, 4];
+const tab2 = [5, 6, 7, 8];
+const tab3 = [9, 10, 11, 12, 13];
+const sum = tab1.concat(tab2, tab3);
+console.log(sum);
+
+// splice - służy do dodawania elementów określonych przez parametr
+
+const fruit = ["Banana", "Orange", "Apple", "Mango"];
+fruit.splice(2, 2, "lemon", "kiwi");
+console.log(fruit);
+fruit.splice(0, 2);
+console.log("uzycie splice do usuwania")
+console.log(fruit);
+
+// slice tworzy nową tablice, nie usuwa starej.
+
+const circuit = fruit.slice(1, 2);
+console.log(circuit);
+
+//zamiana tablicy w stringa
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+console.log(fruits.toString());
+
+// wyrażenie funkcyjne
 /* var hello = function() {
     return "hello word";
 }
 
+//funkcja strzałkowa
 var hello = () => {
     return "hello word";
 }
-
-
-
-
-
 */
+
+
+
 
 /* let text = "<ul>"
 cars.forEach(myFunction);
