@@ -9,6 +9,20 @@ var z = fn(2, 3, 4);
 var c = fn(1, 2, 3);
 console.log(x + y + z + c);
 
+console.log("--------------function expression and arrow function---------------")
+
+// wyrażenie funkcyjne
+var hello = function () {
+    return "hello word";
+}
+console.log(hello())
+//funkcja strzałkowa
+var hello = () => {
+    return "hello word";
+}
+console.log(hello())
+
+console.log("--------------object---------------")
 
 //OBJECT
 const person = {
@@ -31,6 +45,7 @@ const person2 = {
 
 document.getElementById("root").innerHTML = person.fullName() + ' ' + person2.fullName() + cars;
 
+console.log("-----------Array---------------")
 
 // ARRAY
 const cars = ['saab', 'volvo', 'bmw'];
@@ -52,10 +67,15 @@ for (let i = 0; i < cars.length; i++) {
 
 cars.forEach((item, index, arr) => console.log(item, index, arr));
 
-cars.forEach(function (item) {
-    document.write(item + '<br>')
-})
+//for each wsadzony w innerHTML
 
+let dupa = ""
+cars.forEach(f)
+
+function f(item) {
+    dupa += item + "</br>"
+}
+document.getElementById("test").innerHTML = dupa
 
 // testujemy nowa funkcję
 const numbers = [1, 2, 3, 4]
@@ -110,27 +130,26 @@ console.log(circuit);
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 console.log(fruits.toString());
 
-// wyrażenie funkcyjne
-/* var hello = function() {
-    return "hello word";
-}
+//funkcja map() wykonuje na każdym elemencie z tablicy 
+const numbers1 = [45, 4, 9, 16, 25];
+const numbers2 = numbers1.map(f2);
+function f2(value, index, array) {
+    return value * 2
+};
+console.log(numbers2);
 
-//funkcja strzałkowa
-var hello = () => {
-    return "hello word";
-}
-*/
+// funcja filter() tworzy nową tablicę, która spełni wymagania 
+console.log("-------------filter()-------------");
+
+const numbers3 = [1, 2, 3, 4];
+numbers3.filter(f3)
+function f3(value, index, array) {
+    return value > 2
+};
+
+document.getElementById("test2").innerHTML = numbers3
 
 
 
 
-/* let text = "<ul>"
-cars.forEach(myFunction);
-text += "</ul>";
-
-function myFunction(value) {
-    text += "<li>" + value + "</li>"
-} */
-// SYNtAX
-
-// document.getElementById("root").innerHTML = text;
+const chuj = [1, 2, 3, 4, 5, 6, 7, 8, 9];
