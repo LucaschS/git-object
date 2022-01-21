@@ -214,11 +214,9 @@ const people = [
 ];
 
 function func(a, b) {
-    const x = a.name.toLowerCase();
-    const y = b.name.toLowerCase();
-    if (x < y) { return 1 }
-    else if (x > y) { return -1 }
-    else { return 0 }
+    if (a.name < b.name) { return -1 }
+    if (a.name > b.name) { return 1 }
+    return 0;
 }
 
 characters.sort(func);
