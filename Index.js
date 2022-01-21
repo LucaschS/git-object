@@ -130,26 +130,96 @@ console.log(circuit);
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
 console.log(fruits.toString());
 
-//funkcja map() wykonuje na każdym elemencie z tablicy 
-const numbers1 = [45, 4, 9, 16, 25];
-const numbers2 = numbers1.map(f2);
-function f2(value, index, array) {
-    return value * 2
-};
-console.log(numbers2);
+console.log("----arrays------")
+const liczby = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+liczby.pop();
+liczby.pop();
+liczby.pop();
+liczby.pop();
+console.log(liczby);
+liczby[0] = 20;
+console.log(liczby);
+liczby.splice(3, 0, 40, 50);
+console.log(liczby);
+const liczby2 = liczby.slice(2, 3);
+console.log(liczby2);
+
 
 // funcja filter() tworzy nową tablicę, która spełni wymagania 
 console.log("-------------filter()-------------");
 
-const numbers3 = [1, 2, 3, 4];
-numbers3.filter(f3)
+const numbers1 = [1, 2, 3, 4];
+const numbers2 = numbers1.filter(f3)
 function f3(value, index, array) {
     return value > 2
 };
 
-document.getElementById("test2").innerHTML = numbers3
+document.getElementById("test2").innerHTML = numbers2
+console.log(numbers2)
+
+//funkcja map() wykonuje na każdym elemencie z tablicy 
+console.log('----map----')
+const numbers3 = [45, 4, 9, 16, 25];
+const numbers4 = numbers3.map(f2);
+function f2(value, index, array) {
+    return value * 2
+};
+console.log(numbers4);
+
+// reduce()
+console.log("---reduce()---")
+var sum2 = numbers3.reduce(f4);
+function f4(accumulator, currentValue, index, array) {
+    return accumulator + currentValue
+};
+console.log(sum2);
 
 
+const arr = [1, 5, 8, 9, 10];
+let i = 0;
+
+const sum1 = arr.reduce((sum1, number) => {
+    console.log(`Wywołanie #${++i}\tsum: ${sum1}\tnumber: ${number}`);
+    return sum1 - number;
+}, 100);
+
+console.log(sum1); // 33
 
 
-const chuj = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const fruits2 = ["banana", "kiwi", "apple"];
+fruits2.sort();
+fruits2.reverse();
+console.log(fruits2);
+
+const a = [74, 24, 35, 67, 89, 786];
+a.sort(function (a, b) {
+    return a - b;
+})
+console.log(a)
+
+console.log("----sortowanie obiektów w tablicy----")
+
+const characters = [
+    { name: 'Tom Sawyer', birthdate: 1876, death: 1945 },
+    { name: 'Bart Simpson', birthdate: 1989, death: 2017 },
+    { name: 'Holden Caufield', birthdate: 1951, death: 1992 },
+    { name: 'Tom Joad', birthdate: 1939, death: 1967 },
+    { name: 'Peter Griffin', birthdate: 1999, death: 2017 }
+];
+
+const people = [
+    { name: 'cecylia', age: 34 },
+    { name: 'zdizsiek', age: 25 },
+    { name: 'andrzej', age: 76 },
+];
+
+function func(a, b) {
+    const x = a.name.toLowerCase();
+    const y = b.name.toLowerCase();
+    if (x < y) { return 1 }
+    else if (x > y) { return -1 }
+    else { return 0 }
+}
+
+characters.sort(func);
+console.log(characters);
