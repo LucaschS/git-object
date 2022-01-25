@@ -215,8 +215,8 @@ const people = [
 
 function func(a, b) {
     if (a.name < b.name) { return -1 }
-    if (a.name > b.name) { return 1 }
-    return 0;
+    else if (a.name > b.name) { return 1 }
+    else { return 0 }
 }
 
 characters.sort(func);
