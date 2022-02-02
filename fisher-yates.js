@@ -15,19 +15,20 @@ console.log(arr);
  */
 
 
-let dupa = [1, 2, 3, 4];
+let tablica = [1, 2, 3, 4];
 
 function iteracja() {
-    for (let i = dupa.length - 1; i > 0; i--) {
+    for (let i = tablica.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
-        let k = dupa[j];
-        dupa[j] = dupa[i];
-        dupa[i] = k;
+        let k = tablica[j];
+        tablica[j] = tablica[i];
+        tablica[i] = k;
     }
-    return dupa
+    return tablica
 }
 
 
+console.log(iteracja());
 console.log(iteracja());
 console.log(iteracja());
 console.log(iteracja());
